@@ -1,8 +1,7 @@
 from django.urls import path
-from core.views import test_api, TestAPIView
+from core.views import TestAPIView
 
 
 urlpatterns = [
-    path('', test_api),
-    path('class/', TestAPIView.as_view()),
+    path('', TestAPIView.as_view()),
 ]
