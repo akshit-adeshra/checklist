@@ -22,6 +22,7 @@ from rest_framework.schemas import get_schema_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('', include('accounts.urls')),
     # swagger-ui imported for documentation
     path('openapi', get_schema_view(
         title="Your Project",
