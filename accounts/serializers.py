@@ -18,10 +18,10 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         ]
         # extra_kwargs dict is made to give extra property to the fields under it, here we've made both passwords fields
         # as write_only=True, so that no one can read it.
-        extra_kwargs = {
-            'password': {'write_only': True},
-            'password2': {'write_only': True},
-        }
+        # extra_kwargs = {
+        #     'password': {'write_only': True},
+        #     'password2': {'write_only': True},
+        # }
 
     # Note: both create and update methods always returns the instance of the model it uses (here: User).
     def create(self, validated_data):
